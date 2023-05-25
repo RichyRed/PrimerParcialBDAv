@@ -11,7 +11,7 @@ La adquisición de medicamentos e insumos para procedimientos quirúrgicos en lo
 Este es el diagrama UML para esta base de datos:
 
 
-![DiagramaDB](https://github.com/RichyRed/PrimerParcialBDAv/assets/84047015/991df360-4c29-406b-94c9-84495429d0af)
+![DiagramaDB1 drawio](https://github.com/RichyRed/PrimerParcialBDAv/assets/84047015/9a216937-7288-414c-a4e5-cf5fc11fced4)
 
 
 
