@@ -29,12 +29,25 @@ Insumo <-> Adquisición_Insumos (a través de la tabla Adquisición_Insumos)
 
 ## Requisitos
 
-* Docker
-* GitHub
+* Tener instalado Docker
+* Tener instalado git, para poder clonar el repositorio
 
 ## Como levantar
 
-* Clonar el repo
+* Clonar el repo:
+
+        git clone <URL_DEL_REPOSITORIO>
+* Nos dirigimos a la ruta:
+
+       cd /ruta/repositorio/clon
+* Levantamos el archivo .yml:
+
+        docker-compose -f docker-compose.yml up
+
+* Para bajar el servicio colocamos: 
+
+     docker-compose -f docker-compose.yml down
+
 
 
 
