@@ -1,6 +1,6 @@
-## Primer Parcial Base de Datos Avanzadas
+# Primer Parcial Base de Datos Avanzadas
 
-El objetivo de este repositorio es contener todos los datos y carchviso creados para el pirmer parcial de esta materia. Conteniendo el diagrama UML, requisitos tecnicos y su ejecucion.
+El objetivo de este repositorio es contener todos los datos y archivos creados para el pirmer parcial de esta materia. Conteniendo el diagrama UML, requisitos tecnicos y su ejecucion.
 
 ### ADQUISICION DE MEDICAMENTOS E INSUMOS PARA PROCEDIMIENTOS A NIVEL NACIONAL DEL PNFRFSS.
 
