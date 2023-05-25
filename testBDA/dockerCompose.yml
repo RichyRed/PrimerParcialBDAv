@@ -1,0 +1,68 @@
+version: "3"
+
+
+services:
+  master1:
+    image: mysql:debian
+    container_name: master
+    ports:
+      - "3310:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: admin123
+      MYSQL_DATABASE: master_db
+      POSTGRES_USER: master
+      POSTGRES_PASSWORD: admin123
+      POSTGRES_DB: master_db
+    volumes:
+      - ./master-scripts:/docker-entrypoint-initdb.d
+    networks:
+      db-network:
+        ipv4_address: 172.16.0.7
+
+
+
+  db_slave1:
+    image: mysql:debian
+    container_name: slave1
+    ports:
+      - "3311:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: admin123
+      MYSQL_DATABASE: slave1_db
+      MYSQL_MASTER_HOST: master
+      MYSQL_MASTER_USER: root
+      MYSQL_MASTER_PASSWORD: admin123
+      POSTGRES_USER: slave1
+      POSTGRES_PASSWORD: admin123
+      POSTGRES_DB: master_db
+    networks:
+      db-network:
+        ipv4_address: 172.16.0.8
+
+
+
+
+  db_slave2:
+    image: mysql:debian
+    container_name: slave2
+    ports:
+      - "3312:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: admin123
+      MYSQL_DATABASE: slave2_db
+      MYSQL_MASTER_HOST: master
+      MYSQL_MASTER_USER: root
+      MYSQL_MASTER_PASSWORD: admin123
+      POSTGRES_USER: slave2
+      POSTGRES_PASSWORD: admin123
+      POSTGRES_DB: master_db
+    networks:
+      db-network:
+        ipv4_address: 172.16.0.9
+
+networks:
+  db-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.16.0.0/24
